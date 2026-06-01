@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Free Strategic Guidance Workshop",
+  title: "Registration page",
   description: "Register for a free strategic guidance workshop.",
 };
 

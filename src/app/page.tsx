@@ -23,7 +23,7 @@ export default function Home() {
               />
 
               <div className="min-w-0">
-                <h1 className="text-4xl font-black leading-[0.96] tracking-normal sm:text-5xl min-[1025px]:text-6xl xl:text-7xl">
+                <h1 className="text-[2.65rem] font-black leading-[0.96] tracking-normal sm:text-6xl min-[1025px]:text-7xl xl:text-[5rem]">
                   <span className="block text-white">Free</span>
                   <span className="block text-[#30dd97]">Strategic</span>
                   <span className="block text-[#30dd97]">Guidance</span>
