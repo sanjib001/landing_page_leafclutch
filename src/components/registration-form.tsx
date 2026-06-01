@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 type WorkshopFormValues = {
   fullName: string;
   email: string;
+  phoneNumber: string;
 };
 
 export function RegistrationForm() {
@@ -19,6 +20,7 @@ export function RegistrationForm() {
     defaultValues: {
       fullName: "",
       email: "",
+      phoneNumber: "",
     },
   });
 
@@ -29,7 +31,7 @@ export function RegistrationForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="mt-8 w-full rounded-[22px] border border-white/35 bg-[#061d56]/80 p-7 shadow-[0_24px_45px_rgba(0,0,0,0.34)] backdrop-blur-sm sm:p-8"
+      className="mt-8 w-full max-w-[520px] rounded-[22px] border border-white/35 bg-[#061d56]/80 p-5 shadow-[0_24px_45px_rgba(0,0,0,0.34)] backdrop-blur-sm sm:p-8"
       noValidate
     >
       <div>
@@ -76,6 +78,42 @@ export function RegistrationForm() {
         {errors.email ? (
           <p className="mt-2 text-sm font-medium text-red-200">
             {errors.email.message}
+          </p>
+        ) : null}
+      </div>
+
+      <div className="mt-5">
+        <label htmlFor="phoneNumber" className="text-lg font-bold text-white">
+          Phone Number
+        </label>
+        <input
+          id="phoneNumber"
+          type="tel"
+          placeholder="Enter your phone number"
+          autoComplete="tel"
+          inputMode="tel"
+          aria-invalid={Boolean(errors.phoneNumber)}
+          className="mt-3 h-14 w-full rounded-xl bg-white px-5 text-base font-medium text-[#061d56] outline-none ring-2 ring-transparent transition placeholder:text-slate-400 focus:ring-[#30dd97]"
+          {...register("phoneNumber", {
+            required: "Phone Number is required",
+            validate: (value) => {
+              const digits = value.replace(/\D/g, "");
+
+              if (digits.length < 7) {
+                return "Phone Number must be at least 7 digits";
+              }
+
+              if (digits.length > 15) {
+                return "Phone Number must be at most 15 digits";
+              }
+
+              return true;
+            },
+          })}
+        />
+        {errors.phoneNumber ? (
+          <p className="mt-2 text-sm font-medium text-red-200">
+            {errors.phoneNumber.message}
           </p>
         ) : null}
       </div>

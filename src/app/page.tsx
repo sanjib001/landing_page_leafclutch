@@ -9,21 +9,21 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-[#02184b] text-white">
       <TechBackground />
 
-      <section className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1240px] flex-col px-5 py-8 sm:px-8 lg:px-10 lg:py-10">
-        <div className="grid flex-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-4">
-          <div className="mx-auto flex w-full max-w-[560px] flex-col lg:mx-0 lg:pl-8">
-            <div className="flex items-start gap-6 sm:gap-8">
+      <section className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-4 py-7 sm:px-8 sm:py-9 min-[1025px]:px-12 xl:px-16">
+        <div className="grid flex-1 items-center gap-9 sm:gap-12 min-[1025px]:grid-cols-[45%_55%] min-[1025px]:gap-8 xl:gap-14">
+          <div className="mx-auto flex w-full max-w-[520px] flex-col min-[1025px]:mx-0 min-[1025px]:max-w-[560px]">
+            <div className="flex items-start gap-4 sm:gap-7 min-[1025px]:gap-8">
               <Image
                 src="/Logo.png"
                 alt="Leafclutch logo"
                 width={140}
                 height={140}
                 priority
-                className="mt-1 h-20 w-20 shrink-0 object-contain drop-shadow-[0_0_18px_rgba(48,221,151,0.35)] sm:h-28 sm:w-28 lg:h-32 lg:w-32"
+                className="mt-1 h-16 w-16 shrink-0 object-contain drop-shadow-[0_0_18px_rgba(48,221,151,0.35)] sm:h-24 sm:w-24 min-[1025px]:h-28 min-[1025px]:w-28 xl:h-32 xl:w-32"
               />
 
-              <div>
-                <h1 className="text-[clamp(3.4rem,8vw,5.9rem)] font-black leading-[0.93] tracking-normal">
+              <div className="min-w-0">
+                <h1 className="text-4xl font-black leading-[0.96] tracking-normal sm:text-5xl min-[1025px]:text-6xl xl:text-7xl">
                   <span className="block text-white">Free</span>
                   <span className="block text-[#30dd97]">Strategic</span>
                   <span className="block text-[#30dd97]">Guidance</span>
@@ -42,16 +42,16 @@ export default function Home() {
             <RegistrationForm />
           </div>
 
-          <div className="relative mx-auto flex aspect-square w-full max-w-[350px] items-center justify-center sm:max-w-[520px] lg:max-w-[610px] lg:justify-self-end">
-            <div className="absolute inset-[5%] rounded-full border border-[#30dd97]/25 bg-[#03245f]/25 shadow-[0_0_85px_rgba(48,221,151,0.35),inset_0_0_75px_rgba(48,221,151,0.12)]" />
-            <div className="absolute inset-[13%] rounded-full bg-[#30dd97]/10 blur-2xl" />
+          <div className="relative mx-auto flex aspect-square w-full max-w-[300px] items-center justify-center sm:max-w-[480px] min-[1025px]:max-w-[550px] min-[1025px]:justify-self-center xl:justify-self-start">
+            <div className="absolute inset-[3%] rounded-full border border-[#30dd97]/30 bg-[#03245f]/25 shadow-[0_0_95px_rgba(48,221,151,0.36),inset_0_0_75px_rgba(48,221,151,0.12)]" />
+            <div className="absolute inset-[12%] rounded-full bg-[#30dd97]/12 blur-2xl" />
             <Image
               src="/Logo.png"
               alt="Leafclutch workshop emblem"
-              width={620}
-              height={620}
+              width={550}
+              height={550}
               priority
-              className="relative z-10 h-[88%] w-[88%] object-contain drop-shadow-[0_0_38px_rgba(48,221,151,0.72)]"
+              className="relative z-10 h-auto w-full max-w-[550px] object-contain drop-shadow-[0_0_38px_rgba(48,221,151,0.72)]"
             />
           </div>
         </div>

@@ -6,21 +6,21 @@ export default function RegisterSuccessPage() {
     <main className="relative min-h-screen overflow-hidden bg-[#02184b] text-white">
       <TechBackground variant="success" />
 
-      <section className="relative z-10 flex min-h-screen flex-col items-center justify-center px-5 text-center">
+      <section className="relative z-10 flex min-h-screen flex-col items-center justify-center px-5 py-12 text-center">
         <Image
           src="/Logo.png"
           alt="Leafclutch logo"
           width={150}
           height={150}
           priority
-          className="mb-10 h-28 w-28 object-contain drop-shadow-[0_0_22px_rgba(48,221,151,0.42)] sm:h-36 sm:w-36"
+          className="mb-8 h-24 w-24 object-contain drop-shadow-[0_0_22px_rgba(48,221,151,0.42)] sm:mb-10 sm:h-36 sm:w-36"
         />
 
-        <h1 className="text-[clamp(2.45rem,6vw,4.9rem)] font-black leading-tight tracking-normal text-[#30dd97] drop-shadow-[0_0_20px_rgba(48,221,151,0.22)]">
+        <h1 className="max-w-[1100px] text-4xl font-black leading-tight tracking-normal text-[#30dd97] drop-shadow-[0_0_20px_rgba(48,221,151,0.22)] sm:text-5xl lg:text-6xl xl:text-7xl">
           Thank You for Registration!
         </h1>
 
-        <p className="mt-5 text-lg font-medium text-white/95 sm:text-2xl">
+        <p className="mt-5 max-w-[760px] text-base font-medium text-white/95 sm:text-2xl">
           You&apos;ll get the mail day before the free workshop.
         </p>
 

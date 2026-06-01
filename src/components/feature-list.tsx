@@ -15,16 +15,19 @@ const features: Feature[] = [
 
 export function FeatureList() {
   return (
-    <div className="mx-auto grid w-full max-w-[1020px] grid-cols-1 gap-5 pb-4 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:pt-10">
+    <div className="mx-auto grid w-full max-w-[1080px] grid-cols-2 gap-x-3 gap-y-6 pb-4 pt-8 sm:gap-x-8 sm:gap-y-7 min-[1025px]:grid-cols-4 min-[1025px]:gap-0 min-[1025px]:pt-10">
       {features.map(({ label, Icon }) => (
         <div
           key={label}
-          className="flex items-center justify-center gap-4 lg:border-l lg:border-white/15 lg:first:border-l-0"
+          className="flex min-w-0 items-center justify-center gap-3 sm:gap-4 min-[1025px]:border-l min-[1025px]:border-white/15 min-[1025px]:first:border-l-0"
         >
-          <div className="flex h-[74px] w-[74px] shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.07] shadow-[0_0_24px_rgba(48,221,151,0.23),inset_0_0_22px_rgba(255,255,255,0.07)]">
-            <Icon className="h-10 w-10 text-[#57f39c]" strokeWidth={1.8} />
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/10 bg-[#0b2a62]/80 shadow-[0_0_24px_rgba(48,221,151,0.25),inset_0_0_24px_rgba(255,255,255,0.08)] sm:h-[74px] sm:w-[74px]">
+            <Icon
+              className="h-8 w-8 text-[#57f39c] sm:h-10 sm:w-10"
+              strokeWidth={1.8}
+            />
           </div>
-          <p className="max-w-[150px] text-xl font-medium leading-tight text-white">
+          <p className="max-w-[130px] text-sm font-medium leading-tight text-white sm:max-w-[150px] sm:text-xl">
             {label}
           </p>
         </div>
